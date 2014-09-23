@@ -6,6 +6,19 @@ function getDoc(f) {
   return f.__doc__ || f.meta.doc;
 }
 
+function addDoc(f, doc) {
+  f.__doc__ = doc;
+  if (f.meta) {
+    f.meta.doc = doc;
+  } else {
+    f.meta = {
+      kind: 'irriducible',
+      doc: doc
+    };
+  }
+  return f;
+}
+
 function and(f, g, doc) {
   doc = doc || format('%s and %s', getDoc(f), getDoc(g));
   function and(x) {
@@ -101,7 +114,7 @@ function gte(min, doc) {
   return gte;
 }
 
-function maxLength(max) {
+function maxLength(max, doc) {
   doc = doc || format('length less or equal to %s', max);
   function maxLength(x) {
     return x.length <= max;
@@ -115,7 +128,7 @@ function maxLength(max) {
   return maxLength;
 }
 
-function minLength(min) {
+function minLength(min, doc) {
   doc = doc || format('length greater or equal to %s', min);
   function minLength(x) {
     return x.length >= min;
@@ -131,6 +144,7 @@ function minLength(min) {
 
 module.exports = {
   util: {
+    addDoc: addDoc,
     getDoc: getDoc
   },
   and: and,
