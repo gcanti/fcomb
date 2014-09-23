@@ -147,6 +147,20 @@ function minLength(min, doc) {
   return minLength;
 }
 
+function regexp(re, doc) {
+  doc = doc || format('pattern %s', re.toString());
+  function regexp(x) {
+    return re.test(x);
+  }
+  regexp.meta = {
+    kind: 'regexp',
+    re: re,
+    doc: doc
+  };
+  regexp.__doc__ = doc;
+  return regexp;
+}
+
 module.exports = {
   util: {
     addDoc: addDoc,
@@ -160,5 +174,6 @@ module.exports = {
   gt: gt,
   gte: gte,
   maxLength: maxLength,
-  minLength: minLength
+  minLength: minLength,
+  regexp: regexp
 };
