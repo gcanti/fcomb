@@ -26,6 +26,8 @@ function and(f, g, doc) {
   }
   and.meta = {
     kind: 'and',
+    f: f,
+    g: g,
     doc: doc
   };
   and.__doc__ = doc;
@@ -39,6 +41,8 @@ function or(f, g, doc) {
   }
   or.meta = {
     kind: 'or',
+    f: f,
+    g: g,
     doc: doc
   };
   or.__doc__ = doc;
@@ -52,6 +56,7 @@ function not(f, doc) {
   }
   not.meta = {
     kind: 'not',
+    f: f,
     doc: doc
   };
   not.__doc__ = doc;
