@@ -1,0 +1,31 @@
+{
+  "name": "fcomb",
+  "version": "0.1.0",
+  "description": "Function combinators",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gcanti/fcomb.git"
+  },
+  "author": "Giulio Canti <giulio.canti@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gcanti/fcomb/issues"
+  },
+  "homepage": "https://github.com/gcanti/fcomb",
+  "dependencies": {
+    "tcomb": "~0.2.1"
+  },
+  "devDependencies": {
+  },
+  "tags": [
+    "function",
+    "combinators"
+  ],
+  "keywords": [
+    "function",
+    "combinators"
+  ]
+}
