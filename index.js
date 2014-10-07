@@ -64,7 +64,7 @@ function not(f, doc) {
 }
 
 function lt(sup, doc) {
-  doc = doc || format('less then %s', sup);
+  doc = doc || format('less than %s', sup);
   function lt(x) {
     return x < sup;
   }
@@ -92,7 +92,7 @@ function lte(max, doc) {
 }
 
 function gt(inf, doc) {
-  doc = doc || format('greater then %s', inf);
+  doc = doc || format('greater than %s', inf);
   function gt(x) {
     return x > inf;
   }
