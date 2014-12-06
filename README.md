@@ -1,4 +1,1 @@
-fcomb
-=====
-
 Function combinators

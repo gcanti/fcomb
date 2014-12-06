@@ -1,9 +1,10 @@
 {
   "name": "fcomb",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Function combinators",
   "main": "index.js",
   "scripts": {
+    "test": "node test/test"
   },
   "repository": {
     "type": "git",
@@ -16,16 +17,14 @@
   },
   "homepage": "https://github.com/gcanti/fcomb",
   "dependencies": {
-    "tcomb": "~0.2.1"
   },
   "devDependencies": {
+    "tape": "^3.0.3"
   },
   "tags": [
-    "function",
     "combinators"
   ],
   "keywords": [
-    "function",
     "combinators"
   ]
 }
